@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.craneos.demos.spring.applicationcontext.xml"/>
+
+    <bean name="applicationContextXmlService" class="com.craneos.demos.spring.applicationcontext.xml.service.ApplicationContextXmlService"/>
+
+    <!-- @AUTOWIRED -->
+    <!-- SimpleApplicationContextMessage. Bean with only one definition -->
+    <bean name="simpleApplicationContextMessage" class="com.craneos.demos.common.model.SimpleMessage">
+        <property name="id" value="101"/>
+        <property name="name" value="test1"/>
+        <property name="message" value="SIMPLE bean defined in the xml file"/>
+        <property name="timestamp" value="10-2-2021"/>
+    </bean>
+
+    <!-- @PRIMARY -->
+    <!-- ApplicationContextMessage. Bean with two differents definition. We must use primary property or annotation -->
+    <bean name="testContextMessage1" class="com.craneos.demos.spring.applicationcontext.xml.service.model.ApplicationContextXmlMessage" primary="false">
+        <property name="id" value="201"/>
+        <property name="name" value="test1"/>
+        <property name="message" value="this is the message autowired of the FIRST bean defined in the xml file"/>
+        <property name="timestamp" value="10-2-2021"/>
+    </bean>
+
+    <bean name="testContextMessage2" class="com.craneos.demos.spring.applicationcontext.xml.service.model.ApplicationContextXmlMessage" primary="true">
+        <property name="id" value="202"/>
+        <property name="name" value="test1"/>
+        <property name="message" value="this is the message autowired of the SECOND bean defined in the xml file"/>
+        <property name="timestamp" value="10-2-2021"/>
+    </bean>
+
+    <!-- @QUALIFIER -->
+    <!-- QualifiedContextMessage. Bean with two differents definition. We use qualifier -->
+    <bean id="qualifiedMessage1" name="qm1" class="com.craneos.demos.spring.applicationcontext.xml.service.model.QualifiedContextXmlMessage">
+        <property name="id" value="301"/>
+        <property name="name" value="test1"/>
+        <property name="message" value="QUALIFIED bean. Message autowired of the -qualifiedMessage1- bean defined in the xml file"/>
+        <property name="timestamp" value="10-2-2021"/>
+    </bean>
+
+    <bean id="qualifiedMessage2" name="qm2" class="com.craneos.demos.spring.applicationcontext.xml.service.model.QualifiedContextXmlMessage">
+        <property name="id" value="302"/>
+        <property name="name" value="test1"/>
+        <property name="message" value="QUALIFIED bean. Message autowired of the -qualifiedMessage2- bean defined in the xml file"/>
+        <property name="timestamp" value="10-2-2021"/>
+    </bean>
+</beans>

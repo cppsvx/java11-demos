@@ -1,0 +1,2 @@
+INSERT INTO employee (id, code, pid, name, surname1, surname2, email, phone) VALUES (1, 'a1', '11M', 'marta', 'soto', '', 'email@domain.com', 913333333);
+INSERT INTO employee (id, code, pid, name, surname1, surname2, email, phone) VALUES (2, 'a2', '11M', 'james', 'bond', '', 'email@domain.com', 913333333);

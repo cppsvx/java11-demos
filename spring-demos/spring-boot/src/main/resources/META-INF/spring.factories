@@ -1,0 +1,4 @@
+# Demo com.craneos.demos.spring.autoconfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.craneos.demos.spring.autoconfiguration.config.OtherAutoConfiguration,\
+com.craneos.demos.spring.autoconfiguration.config.OtherAutoConfigurationWithConditionals
