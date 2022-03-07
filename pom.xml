@@ -18,5 +18,6 @@
     <modules>
         <module>jpa-demos</module>
         <module>spring-demos</module>
+        <module>servlet-demos</module>
     </modules>
 </project>
