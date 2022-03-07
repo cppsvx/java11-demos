@@ -1,4 +1,4 @@
-package com.craneos.jpa;
+package com.craneos.demos.jpa;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
@@ -17,7 +17,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @Testcontainers
-public class TestDemoJpaDocker {
+public class TestDemoSpringJpaDocker {
 
     /** Using the @Container annotation is an easy way to add a Testcontainer but the problem is that your Testcontainers
      * will be started and stopped for each test class. A better way is to use the singleton pattern and use an abstract
