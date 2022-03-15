@@ -19,5 +19,7 @@
         <module>jpa-demos</module>
         <module>spring-demos</module>
         <module>servlet-demos</module>
+        <module>security-demos</module>
     </modules>
+
 </project>

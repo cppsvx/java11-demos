@@ -9,13 +9,14 @@
         <module name="spring-jpa" />
         <module name="spring-integration" />
         <module name="basic-servlet" />
+        <module name="basic-hibernate-docker" />
+        <module name="basic-hibernate" />
+        <module name="thymeleaf" />
         <module name="spring-security" />
         <module name="spring-boot" />
         <module name="basic-servlet-jersey" />
         <module name="basic-servlet-jersey-logs" />
-        <module name="basic-hibernate-docker" />
-        <module name="basic-hibernate" />
-        <module name="thymeleaf" />
+        <module name="basic-cipher" />
         <module name="basic-servlet-javax" />
         <module name="basic-servlet-annotations" />
       </profile>
